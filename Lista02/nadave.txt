@@ -1,0 +1,18 @@
+<?php
+	if($_SERVER['REQUEST_METHOD'] == "POST"){
+		try{
+			$x = (int) $_POST["num"];
+			
+			if($x > 0){
+				echo "Número positivo";
+			}
+			elseif($x == 0){
+				echo "Zero";
+			}
+			else{
+				echo "Número negativo";
+			}
+		}catch(Exception $e){
+			echo "Erro: ".$e->getMessage();
+		}
+	}
